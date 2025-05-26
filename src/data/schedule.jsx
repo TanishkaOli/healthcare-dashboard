@@ -2,8 +2,8 @@ export const schedule = [
   {
     day: 'On Thursday',
     appointments: [
-      { title: 'Health checkup complete', time: '10:00 AM' },
-      { title: 'Ophthalmologist', time: '12:30 PM' },
+      { title: 'Health checkup complete', time: '10:00 AM' ,icon: "❤️" },
+      { title: 'Ophthalmologist', time: '12:30 PM' ,icon: "🦷" },
     ],
   },
   {

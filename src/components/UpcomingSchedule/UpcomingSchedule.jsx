@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCalendarAlt, FaPhone, FaUsers } from 'react-icons/fa'; // example icons
 import './UpcomingSchedule.css';
 
 const UpcomingSchedule = ({ schedule }) => (
@@ -8,16 +9,21 @@ const UpcomingSchedule = ({ schedule }) => (
       <div className="schedule-group" key={index}>
         <div className="schedule-day-label">{group.day}</div>
         <div className="schedule-grid">
-          {group.list.map((appt, i) => (
+          {group.appointments.map((appt, i) => (
             <div className="schedule-item" key={i}>
-              {/* Show emoji icon */}
-              <div className="schedule-icon" aria-label={appt.title + " icon"}>
-                <span role="img" aria-label={appt.title}>{appt.icon}</span>
+              {/* Icon based on type */}
+              <div className="schedule-icon">
+                {appt.type === 'call' && <FaPhone />}
+                {appt.type === 'meeting' && <FaUsers />}
+                {!appt.type && <FaCalendarAlt />}
               </div>
+
+              <div className={`appointment-dot ${appt.type || 'call'}`} />
 
               <div className="schedule-time">{appt.time}</div>
               <div className="schedule-details">
                 <div className="schedule-title">{appt.title}</div>
+                <div className="schedule-description">{appt.description}</div>
               </div>
             </div>
           ))}
