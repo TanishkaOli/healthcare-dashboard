@@ -1,0 +1,145 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #f4f7fc;
+  color: #2e3a59; /* Darker text for better readability */
+}
+
+/* Container for whole app */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f7fc;
+}
+
+/* Main content area beside sidebar */
+.main-content {
+  margin-left: 240px; /* width of sidebar */
+  padding: 80px 32px 24px; /* more breathing room on sides */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  overflow-y: visible;
+  background-color: #f9fbfe; /* Slightly lighter background */
+}
+
+/* Main dashboard content wrapper */
+.dashboard-main-content {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Layout grid for calendar + schedule */
+.calendar-schedule-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Left column - anatomy, health cards, activity feed */
+.left-column {
+  flex: 1;
+  min-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Right column - calendar + upcoming schedule stacked */
+.right-column {
+  width: 35%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: auto;
+}
+
+/* Anatomy and health status row */
+.anatomy-health-row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Specific flex proportions */
+.anatomy-health-row > .anatomy-section {
+  flex: 2;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+.anatomy-health-row > .anatomy-section:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+}
+
+.anatomy-health-row > .health-cards {
+  flex: 1;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+.anatomy-health-row > .health-cards:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Activity Feed Card */
+.left-column > .activity-feed {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Calendar and Schedule cards on right */
+.right-column > * {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.right-column > *:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .dashboard-main-content {
+    flex-direction: column;
+  }
+  .left-column, .right-column {
+    width: 100%;
+    min-width: auto;
+  }
+  .right-column {
+    height: auto;
+  }
+  .anatomy-health-row {
+    flex-direction: column;
+  }
+  .anatomy-health-row > * {
+    flex: none;
+    width: 100%;
+  }
+}

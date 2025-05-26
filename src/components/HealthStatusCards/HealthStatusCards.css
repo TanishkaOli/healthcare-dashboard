@@ -1,0 +1,77 @@
+.health-cards-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.health-card {
+  background-color: white;
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.health-card h4 {
+  margin: 0 0 8px;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.status.healthy {
+  background-color: #e0f7e9;
+  color: #2e7d32;
+}
+.progress-bar {
+  width: 100%;
+  background-color: #f0eded;
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+  margin-top:8px;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.progress-red {
+  background-color: #e53935;
+}
+
+.progress-green {
+  background-color: #85f18b;
+}
+
+.progress-purple {
+  background-color: #a8e9c2;
+}
+
+
+
+.status.warning {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}

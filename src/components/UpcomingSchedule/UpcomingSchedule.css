@@ -1,0 +1,103 @@
+.schedule-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.schedule-day-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Two-column grid for appointments, with controlled gaps */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 16px; /* row gap 10px, column gap 16px */
+}
+
+/* Smaller schedule item box */
+.schedule-item {
+  display: grid;
+  grid-template-columns: auto auto 60px 1fr; /* added icon column */
+  align-items: center;
+  gap: 8px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  min-width: 0;
+}
+
+/* Hover state */
+.schedule-item:hover {
+  background-color: #e0e7ff;
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Smaller appointment dot */
+.appointment-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.appointment-dot.call {
+  background-color: #3b82f6;
+}
+
+.appointment-dot.meeting {
+  background-color: #10b981;
+}
+
+.schedule-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  white-space: nowrap;
+  text-align: right;
+  min-width: 60px; /* keeps width consistent */
+}
+
+.schedule-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0; /* important for text overflow handling */
+  overflow: hidden;
+}
+
+/* Titles and descriptions with ellipsis to prevent overflow */
+.schedule-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.schedule-description {
+  font-size: 12px;
+  color: #6b7280;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.schedule-icon {
+  font-size: 18px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,38 @@
+/* AnatomySection.css */
+.anatomy-section {
+  grid-column: span 4;
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.anatomy-img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.indicators {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.indicator {
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.indicator.healthy {
+  background-color: #e0f7e9;
+  color: #2e7d32;
+}
+
+.indicator.issue {
+  background-color: #fdecea;
+  color: #c62828;
+}

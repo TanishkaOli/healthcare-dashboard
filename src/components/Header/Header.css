@@ -1,0 +1,107 @@
+/* Header Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 240px; /* if sidebar is fixed width 240px */
+  right: 0;
+  height: 60px; /* header height */
+  background-color: #fff;
+  z-index: 1100;
+  display: flex;
+  align-items: center; /* vertically center */
+  padding: 0 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-family: 'Inter', sans-serif;
+  justify-content: space-between;
+}
+
+/* Left group: logo, search, bell */
+.header-left {
+  display: flex;
+  align-items: center; /* center vertically */
+  gap: 24px;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: #223b5f;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Search bar */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f3f6fb;
+  border-radius: 12px;
+  padding: 6px 12px;
+  width: 240px;
+  pointer-events: none; /* Disable interaction */
+}
+
+.search-icon {
+  color: #a0a8ba;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #7e8299;
+  outline: none;
+  width: 100%;
+  cursor: default;
+}
+
+/* Bell icon */
+.header-icon {
+  color: #7e8299;
+  cursor: default;
+}
+
+/* Right group: button, user profile */
+.header-right {
+  display: flex;
+  align-items: center; /* center vertically */
+  gap: 24px;
+}
+
+/* Add button */
+.add-button {
+  background-color: #5386e4;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: white;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* User profile */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: default;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #3b3f58;
+}

@@ -1,0 +1,129 @@
+/* Calendar container */
+.calendar-section {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  max-width: 100%;
+  color: #1e293b;
+}
+
+/* Title */
+.calendar-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 8px;
+}
+
+/* Calendar grid: one row with 7 columns for week days */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+/* Each calendar day box */
+.calendar-day {
+  background-color: #f8fafc;
+  border-radius: 14px;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #334155;
+  min-height: 72px; /* Taller to accommodate weekday and date */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+/* Hover and focus */
+.calendar-day:hover,
+.calendar-day:focus {
+  background-color: #e0e7ff;
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4);
+  color: #1e40af;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* Weekday name (Mon, Tue, etc) */
+.weekday-name {
+  font-weight: 600;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+  user-select: none;
+}
+
+/* Date number below weekday name */
+.weekday-date {
+  font-weight: 700;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Appointments styles unchanged */
+.appointment-box {
+  margin-top: 6px;
+  background-color: #f9fbfd;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #344054;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.02);
+}
+
+.appointment-box h4,
+.appointment-subheading {
+  font-size: 13px;
+  font-weight: 600;
+  color: #344054;
+  margin-bottom: 6px;
+}
+
+.appointment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.appointment-item {
+  flex: 1 1 auto;
+  min-width: 120px;
+  max-width: 180px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  user-select: none;
+  cursor: default;
+  transition: box-shadow 0.2s ease;
+  font-size: 11px;
+}
+
+.appointment-item:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.appointment-item.upcoming {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.appointment-item.past {
+  background-color: #e2e8f0;
+  color: #475569;
+}
